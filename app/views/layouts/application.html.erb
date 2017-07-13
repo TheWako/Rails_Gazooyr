@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Gazooyr</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+  	<nav class="navbar navbar-default">
+	  <div class="container">
+	    <div class="navbar-header">
+	      <a class="navbar-brand" href="#">
+	        <h2>Gazooyr</h2>
+	      </a>
+	      <ul class="nav">       
+        	<% if user_signed_in? %>
+        	  <li>
+        	 	<a href="#">Mon Compte</a>
+        	  </li>
+        	  <li>
+        	  	<span>Connecté</span>
+        	  </li>
+			  <li>
+			  <%= link_to('Logout', destroy_user_session_path, method: :delete) %>        
+			  </li>
+			<% else %>
+			  <li>
+			  <%= link_to('Login', new_user_session_path)  %>  
+			  </li>
+			  <li>
+        	  	<span>Déconnecté</span>
+        	  </li>
+			<% end %>
+			</ul>
+	    </div>
+	  </div>
+	</nav>
+    <%= yield %>
+  </body>
+</html>

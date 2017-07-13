@@ -1,0 +1,50 @@
+fr-FR:
+  devise:
+    registrations:
+      new:
+        sign_up: "S'enregistrer"
+        email: "Email"
+        username: "Nom d'utilisateur"
+        password: "Mot de passe"
+        password_confirmation: "Confirmation du mot de passe"
+    shared:
+        links:
+          sign_in: "Connexion"
+          sign_up: "S'enregistrer"
+          forgot_your_password: "Mot de passe oublié"
+          didn_t_receive_confirmation_instructions: "MOUAIS"
+          didn_t_receive_unlock_instructions: "MOUAIS 2"
+          sign_in_with_provider: "Connexion via un service tier"
+    sessions:
+        new:
+          sign_in: "Connexion"
+          email: "Email"
+          password: "Mot de passe"
+          username: "Nom d'utilisateur"
+          remember_me: "Se souvenir de moi"
+          login: "Nom d'utilisateur ou email"
+    passwords:
+      new:
+        forgot_your_password: "Mot de passe oublié"
+        send_me_reset_password_instructions: "Envoyer les instructions de récupération"
+  errors:
+    messages:
+      not_saved: "Un ou plusieurs champs sont incorrects"
+  activerecord:
+    errors:
+      models:
+        user:
+          attributes:
+            email:
+              blank: "Veuillez remplir l'adresse email"
+              taken: "Adresse email déjà utilisée"
+              invalid: "Adresse email invalide"
+            password:
+              blank: "Veuillez remplir le mot de passe"
+              confirmation: "Les mot de passe ne correspondent pas differente"
+            password_confirmation:
+              blank: "Veuillez entrer une confirmation de mot de passe"
+              invalid: "differente"
+              confirmation: "differente"
+            username:
+              blank: "Veuillez entrer un nom d'utilisateur"
